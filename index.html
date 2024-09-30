@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Feliz Cumple Jehi</title>
+</head>
+<body>
+    <div class="giftcontainer"></div>
+        <div class="gift">
+            <input type="checkbox" id="click">
+            <label for="click" class="click"></label>
+            <div class="img">
+                <img src="sherk.jpg" alt="Regalo abierto">
+            </div>
+            <a href="carta.html" class="emoji">✉️</a>
+            <div class="extra-images">
+                <img src="monk.jpg" alt="Imagen 1" >
+                <img src="us.jpg" alt="Imagen 2" >
+                <img src="tres.jpg" alt="Imagen 3">
+            </div>
+        </div>
+    <audio id="giftSound" src="Las Mañanitas by Nata.mp3"></audio> <!-- Agrega tu archivo de audio aquí -->
+    
+    <script>
+        const checkbox = document.getElementById('click');
+        const giftSound = document.getElementById('giftSound');
+
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                giftSound.play(); // Reproduce el sonido cuando el regalo se abre
+            } else {
+                giftSound.pause(); // Detiene el sonido cuando el regalo se cierra
+                giftSound.currentTime = 0; // Reinicia el tiempo del audio al inicio
+            }
+        });
+    </script>
+</body>
+</html>
